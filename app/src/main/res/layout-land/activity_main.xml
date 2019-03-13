@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelFrom"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:text="@string/convert_from"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerFrom"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_margin="15dp"
+        android:entries="@array/currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelFrom" />
+
+    <TextView
+        android:id="@+id/labelTo"
+        android:layout_width="170dp"
+        android:layout_height="30dp"
+        android:layout_margin="15dp"
+        android:ems="10"
+        android:text="@string/convert_to"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFrom" />
+
+    <Spinner
+        android:id="@+id/spinnerTo"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_margin="15dp"
+        android:entries="@array/currency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTo" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_margin="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorButton"
+        android:onClick="onClick"
+        android:text="@string/convertButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/result" />
+
+    <EditText
+        android:id="@+id/number"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:singleLine="false"
+        app:layout_constraintStart_toEndOf="@+id/spinnerFrom"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_width="170dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="60dp"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:inputType="number|numberDecimal"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        app:layout_constraintStart_toEndOf="@+id/spinnerTo"
+        app:layout_constraintTop_toBottomOf="@+id/number" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

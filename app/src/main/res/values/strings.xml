@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="convertButton">Convert</string>
+    <string name="convert_from">Convert From</string>
+    <string name="convert_to">Convert To</string>
+    <string-array name="currency">
+        <item>RUB</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>BTC</item>
+    </string-array>
+</resources>
